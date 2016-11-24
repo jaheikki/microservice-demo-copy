@@ -1,0 +1,13 @@
+general:
+  whitelist: false
+  pipeline_base_name: Parent
+
+compile:
+  go_cd_agent_props:
+    - java:8
+    - maven
+#  type: parallel
+  commands:
+    - tasks:
+      - cmd: mvn clean -N install
+        build_path: .
