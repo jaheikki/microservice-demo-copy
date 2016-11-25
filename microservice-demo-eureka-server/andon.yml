@@ -23,8 +23,8 @@ compile:
     - tasks:
       - cmd: mvn clean -Djava.security.egd=file:/dev/./urandom install
         build_path: .
-      - cmd: scp -o StrictHostKeyChecking=no-i /etc/andon/ssh_keys/hostaccess /var/lib/go-agent/pipelines/Eureka_master/microservice-demo-eureka-server/target/microservice-demo-eureka-server-0.0.1-SNAPSHOT.jar jaheikki@10.4.0.4:~/jars
-      - cmd: ssh  -o StrictHostKeyChecking=no-i /etc/andon/ssh_keys/hostaccess jaheikki@10.4.0.4 /usr/bin/java -Xmx400m -Xms400m -Djava.security.egd=file:/dev/./urandom -jar /home/jaheikki/jars/microservice-demo-eureka-server-0.0.1-SNAPSHOT.jar &
+      - cmd: scp -o StrictHostKeyChecking=no -i /etc/andon/ssh_keys/hostaccess /var/lib/go-agent/pipelines/Eureka_master/microservice-demo-eureka-server/target/microservice-demo-eureka-server-0.0.1-SNAPSHOT.jar jaheikki@10.4.0.4:~/jars
+      - cmd: ssh -o StrictHostKeyChecking=no -i /etc/andon/ssh_keys/hostaccess jaheikki@10.4.0.4 /usr/bin/java -Xmx400m -Xms400m -Djava.security.egd=file:/dev/./urandom -jar /home/jaheikki/jars/microservice-demo-eureka-server-0.0.1-SNAPSHOT.jar &
 #      - cmd: true
 #      - cmd: true
 #        build_path: .
