@@ -24,7 +24,7 @@ compile:
       - cmd: mvn clean -Djava.security.egd=file:/dev/./urandom install
         build_path: .
       - cmd: scp -o StrictHostKeyChecking=no -i /etc/andon/ssh_keys/hostaccess /var/lib/go-agent/pipelines/Catalog_master/microservice-demo-catalog/target/microservice-demo-catalog-0.0.1-SNAPSHOT.jar jaheikki@10.4.0.4:~/jars
-      - cmd: ssh -o StrictHostKeyChecking=no -i /etc/andon/ssh_keys/hostaccess jaheikki@10.4.0.4 /usr/bin/java -Xmx400m -Xms400m -Djava.security.egd=file:/dev/./urandom -jar /home/jaheikki/jars/microservice-demo-catalog-0.0.1-SNAPSHOT.jar &
+      - cmd: ssh -o StrictHostKeyChecking=no -i /etc/andon/ssh_keys/hostaccess jaheikki@10.4.0.4 /usr/bin/java -Xmx400m -Xms400m -Djava.security.egd=file:/dev/./urandom -jar '/home/jaheikki/jars/microservice-demo-catalog-0.0.1-SNAPSHOT.jar > /home/jaheikki/jars/catalog.log 2>&1 &'
 #      - cmd: docker build -f Dockerfile -t catalog:$GO_PIPELINE_COUNTER .
 #        build_path: .
 #        run_if_conditions: passed
