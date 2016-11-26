@@ -1,8 +1,8 @@
 general:
   whitelist: true
   pipeline_base_name: Eureka
-#  dependency:
-#   - Pipeline X [Stage X]
+  dependency:
+   - Catalog [Compile]
 #   - Pipeline Y [Stage Y]
   
 #pre_stage:
