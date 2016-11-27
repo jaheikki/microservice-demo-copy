@@ -129,4 +129,12 @@
 		</profile>
 	</profiles>
 
+    <distributionManagement>
+        <repository>
+            <id>catalog</id>
+            <name>catalog repository</name>
+            <url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+        </repository>
+    </distributionManagement>
+
 </project>
