@@ -31,7 +31,8 @@ compile:
 
 post_stage:
   go_cd_agent_props:
-    - host
+    - java:7
+    - maven
   custom_cmd:
     - ifconfig
 
