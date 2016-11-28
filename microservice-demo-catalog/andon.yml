@@ -34,7 +34,8 @@ post_stage:
     - java:7
     - maven
   custom_cmd:
-    - ifconfig
+    - whoami
+    - /sbin/ifconfig
 
 
 #integration_testing:
