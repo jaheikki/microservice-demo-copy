@@ -33,7 +33,7 @@ post_stage:
   go_cd_agent_props:
     - host
   custom_cmd:
-      - ifconfig
+    - ifconfig
 
 
 #integration_testing:
