@@ -36,8 +36,8 @@ post_stage:
   custom_cmd:
     - whoami
     - /sbin/ifconfig
-    - mvn compile -PgetJar
-    - /usr/bin/java -Xmx400m -Xms400m -Djava.security.egd=file:/dev/./urandom -jar '/home/jaheikki/jars/microservice-demo-catalog-0.0.1-SNAPSHOT.jar
+#    - mvn compile -PgetJar
+#    - /usr/bin/java -Xmx400m -Xms400m -Djava.security.egd=file:/dev/./urandom -jar '/home/jaheikki/jars/microservice-demo-catalog-0.0.1-SNAPSHOT.jar
 
 
 #integration_testing:
