@@ -16,6 +16,7 @@ general:
 compile:
   go_cd_agent_props:
     - host
+    - maven
   sonarqube: true
   type: parallel
   commands:
