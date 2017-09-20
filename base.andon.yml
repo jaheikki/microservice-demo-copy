@@ -1,0 +1,27 @@
+# base.andon.yml
+pipelines:
+  BASE:
+    environment_variables:
+      # SONARUSER: admin
+      # SONARPASSWORD: admin
+    group: Tietoallas
+    materials:
+      base:  # this is the name of material
+        # says about type of material and url at once
+        git: https://datalakeman:C5F3Su87@git.public.etb.tieto.com/DataLake/integrations.git
+        branch: develop
+      # hus:
+      #   git: https://datalakeman:C5F3Su87@git.public.etb.tieto.com/DataLake/hus.git    
+    stages:
+      - build: # name of stage
+          jobs:
+            build_component: # name of the job
+              andon: # andon job configuration
+                image: "andon.artifactorypro.shared.pub.tds.tieto.com/andon-gocd-agent-java8-maven3:v17.10.0" # elastic agent image
+                #sonarqube: true
+              tasks:
+               - exec: # indicates type of task
+                   command: bash
+                   arguments:
+                    - "-c" 
+                    - "echo Hello Tapsa!"
